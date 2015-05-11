@@ -4,6 +4,13 @@
     </head>
     
     <body>
+       
+       <div ng-controller="StoreController as store"> <!-- ng-controller is a directive. StoreController is the name of the controller. as is a keyword and store is an alias which we would use in the expressions below-->
+          <h1>{{store.product.name}}</h1>
+          <h2>${{store.product.price}}</h2>
+          <p>{{store.product.description}}</p>   
+       </div>
+       
         <script type="text/javascript" src="js/angular.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script> <!-- this file contains the module -->
     </body>
