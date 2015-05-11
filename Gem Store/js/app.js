@@ -31,6 +31,6 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
         description: 'This gem is mindblowing and sparkling! You cant take your eyes off it.',
         canPurchase: true,
         soldOut: false,
-        }
+        },
     ];
 })();
