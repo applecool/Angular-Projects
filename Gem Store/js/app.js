@@ -11,7 +11,7 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
         this.tab = 1;
         
         this.setTab = function(value){
-            this.setTab = value;
+            this.tab = value;
         };
         
         this.isSet = function(tabName){
@@ -36,6 +36,18 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
             "images/gem-05.gif",
             "images/gem-09.gif"
         ],
+        reviews: [{
+        stars: 5,
+        body: "I love this gem!",
+        author: "joe@example.org",
+        createdOn: 1397490980837
+        }, 
+        {
+        stars: 1,
+        body: "This gem sucks.",
+        author: "tim@example.org",
+        createdOn: 1397490980837
+        }]
         },
         
         {
@@ -53,6 +65,24 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
             "images/gem-03.gif",
             "images/gem-04.gif"
         ],
+        reviews: [{
+        stars: 1,
+        body: "This gem is WAY too expensive for its rarity value.",
+        author: "turtleguyy@example.org",
+        createdOn: 1397490980837
+        }, 
+        {
+        stars: 1,
+        body: "BBW: High Shine != High Quality.",
+        author: "LouisW407@example.org",
+        createdOn: 1397490980837
+        }, 
+        {
+        stars: 1,
+        body: "Don't waste your rubles!",
+        author: "nat@example.org",
+        createdOn: 1397490980837
+        }]    
         },
         
         {
@@ -70,6 +100,18 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
             "images/gem-07.gif",
             "images/gem-08.gif"
         ],
+        reviews: [{
+        stars: 3,
+        body: "I think this gem was just OK, could honestly use more shine, IMO.",
+        author: "JimmyDean@example.org",
+        createdOn: 1397490980837
+        }, 
+        {
+        stars: 4,
+        body: "Any gem with 12 faces is for me!",
+        author: "gemsRock@example.org",
+        createdOn: 1397490980837
+        }]
         },
     ];
 })();
