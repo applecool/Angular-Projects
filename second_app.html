@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="myApp">
+    <title>Angular-Controllers App</title>
+        <script src="JS/angular.min.js"></script>
+   
+   
+  <div ng-controller="Ctrl"> 
+       <label>FirstName: </label> <input type="text" ng-model="firstName" placeholder="Your first name here" >
+       <label>LastName: </label> <input type="text" ng-model="lastName" placeholder="Your last name here" >   
+       <body>
+        <h1>{{firstName + " " + lastName }}</h1>
+           <h2>{{age}}</h2>
+    </body>
+    
+    </div>
+ <script>
+       var app = angular.module('myApp', []);
+       app.controller('Ctrl', ['$scope', function($scope){
+        $scope.firstName = "Tom"; //setting the defaults to the model firstName
+        //$scope.lastName = "Default";
+        $scope.age = 40;
+        $scope.$watch('firstName', function(){
+            console.log($scope.firstName); //watch is very powerful. It is used to monitor the changes in our models.
+        });
+    }]);
+    </script>
+    
+</html>
