@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app>
+    <title></title>
+    <meta name="viewport" content="width=device-width">
+    
+    <script src="JS/angular.min.js"></script>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    
+    body {
+     font: 16px;
+     font-family: sans-serif;
+     color: burlywood;
+     margin: 5em;
+    }
+    
+    </style>
+    
+    <div>
+        <input type="checkbox" ng-model="checked"><label>Show ?</label>
+    </div>
+    
+    <div>
+        <label>Name</label><input type="text" ng-model="name">
+    </div>
+    <div ng-show="checked">
+        Hello, {{name || "world"}}!
+    </div>
+    <hr>
+    <div>
+        <input type="checkbox" ng-model="check"><label>Hide ?</label>
+    </div>
+    <div ng-hide="check">
+        Hello Angular!
+    </div>
+    
+</html>
