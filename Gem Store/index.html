@@ -5,13 +5,17 @@
     
     <body ng-controller="StoreController as store">  <!-- ng-controller is a directive. StoreController is the name of the controller. as is a keyword and store is an alias which we would use in the expressions below-->
        
-       <div class="product-row" ng-hide="store.product.soldOut" ng-repeat="product in store.products"> 
-    <!-- ng-hide is a directive which will hide the occurrance if the value of the expression is evaluated to false. alternatively we can also use ng-show with a ! [NOT] to make it work in a reverse manner -->
+       <div ng-hide="store.product.soldOut"> 
+    <!-- ng-hide is a directive which will hide the section if the value of the expression is evaluated to false. alternatively we can also use ng-show with a ! [NOT] to make it work in a reverse manner -->
          <!-- ng-repeat is a directive which will allow us to loop through an array of items. This works till it reaches to zero items in the array. Here product refers to the current item and store.products refers to our array -->
-          <h1>{{product.name}}</h1>
-           <h2><em>${{product.price}}</em></h2>
-          <p>{{product.description}}</p> 
-          <button ng-show="product.canPurchase">Add to Cart</button>  <!-- ng-show is a directive which will show the button if the value of the expression is true in our case -->
+          <ul class="list-group">
+              <li class="list-group-item" ng-repeat="product in store.products">
+                  <h1>{{product.name}}</h1>
+                   <h2><em class="pull-right">{{product.price | currency}}</em></h2> <!-- Added filter "currency" -->
+                      <p>{{product.description}}</p> 
+                      <!--<button ng-show="product.canPurchase">Add to Cart</button>  <!-- ng-show is a directive which will show the button if the value of the expression is true in our case -->
+              </li>
+           </ul>
           <hr>
        </div>
        
