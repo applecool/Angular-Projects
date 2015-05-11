@@ -1,25 +1,22 @@
-<html ng-app="gemStore"> <!-- ng-app is a directive which actually calls the module when the wesbsite loads up-->
+<html ng-app="gemStore"> 
     <head>
         <link rel="stylesheet" type="text/css" href="js/bootstrap.min.js" />
     </head>
     
-    <body ng-controller="StoreController as store">  <!-- ng-controller is a directive. StoreController is the name of the controller. as is a keyword and store is an alias which we would use in the expressions below-->
-       
+    <body ng-controller="StoreController as store"> 
        <div ng-hide="store.product.soldOut"> 
-    <!-- ng-hide is a directive which will hide the section if the value of the expression is evaluated to false. alternatively we can also use ng-show with a ! [NOT] to make it work in a reverse manner -->
-         <!-- ng-repeat is a directive which will allow us to loop through an array of items. This works till it reaches to zero items in the array. Here product refers to the current item and store.products refers to our array -->
           <ul class="list-group">
               <li class="list-group-item" ng-repeat="product in store.products">
                   <h1>{{product.name}}</h1>
-                   <h2><em class="pull-right">{{product.price | currency}}</em></h2> <!-- Added filter "currency" -->
+                   <h2><em class="pull-right">{{product.price | currency}}</em></h2> 
                       <p>{{product.description}}</p> 
-                      <!--<button ng-show="product.canPurchase">Add to Cart</button>  <!-- ng-show is a directive which will show the button if the value of the expression is true in our case -->
+                      
               </li>
            </ul>
           <hr>
        </div>
        
         <script type="text/javascript" src="js/angular.min.js"></script>
-        <script type="text/javascript" src="js/app.js"></script> <!-- this file contains the module -->
+        <script type="text/javascript" src="js/app.js"></script> 
     </body>
 </html>
