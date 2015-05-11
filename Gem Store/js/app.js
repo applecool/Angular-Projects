@@ -7,6 +7,18 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
         this.products = gems;
     });
     
+    app.controller('TabController', function(){
+        this.tab = 1;
+        
+        this.setTab = function(value){
+            this.setTab = value;
+        };
+        
+        this.isSet = function(tabName){
+            return this.tab === tabName;
+        };
+    });
+    
     var gems = [
         
         {
