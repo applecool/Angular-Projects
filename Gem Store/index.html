@@ -5,9 +5,9 @@
     
     <body>
        
-       <div ng-controller="StoreController as store"> <!-- ng-controller is a directive. StoreController is the name of the controller. as is a keyword and store is an alias which we would use in the expressions below-->
+       <div ng-controller="StoreController as store" class="product-row"> <!-- ng-controller is a directive. StoreController is the name of the controller. as is a keyword and store is an alias which we would use in the expressions below-->
           <h1>{{store.product.name}}</h1>
-          <h2>${{store.product.price}}</h2>
+           <h2><em>${{store.product.price}}</em></h2>
           <p>{{store.product.description}}</p>   
        </div>
        
