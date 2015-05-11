@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app>
+    <title></title>
+    <meta name="viewport" content="width=device-width">
+    
+    <script src="JS/angular.min.js"></script>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    
+    body {
+     font: 16px;
+     font-family: sans-serif;
+     color: burlywood;
+     margin: 5em;
+    }
+    
+    </style>
+    
+    <div>
+        <input type="search" ng-model="search">
+    </div>
+    <div ng-init="names=['Apple', 'Samsung', 'Google', 'Tesla','BMW']">
+        <ul>
+            <li ng-repeat="name in names| filter:search">{{name}}</li>
+        </ul>
+    </div>
+    
+    <!--<script>
+    
+        var List = function($scope) {
+          $scope.names = ["Apple", "Samsung", "Google", "Tesla"];
+        };
+    
+    </script> -->
+    
+</html>
