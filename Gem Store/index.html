@@ -3,12 +3,13 @@
         <link rel="stylesheet" type="text/css" href="js/bootstrap.min.js" />
     </head>
     
-    <body>
+    <body ng-controller="StoreController as store">  <!-- ng-controller is a directive. StoreController is the name of the controller. as is a keyword and store is an alias which we would use in the expressions below-->
        
-       <div ng-controller="StoreController as store" class="product-row"> <!-- ng-controller is a directive. StoreController is the name of the controller. as is a keyword and store is an alias which we would use in the expressions below-->
+       <div class="product-row" ng-hide="store.product.soldOut"> <!-- ng-hide is a directive which will hide the occurrance if the value of the expression is evaluated to false. alternatively we can also use ng-show with a ! [NOT] to make it work in a reverse manner -->
           <h1>{{store.product.name}}</h1>
            <h2><em>${{store.product.price}}</em></h2>
-          <p>{{store.product.description}}</p>   
+          <p>{{store.product.description}}</p> 
+          <button ng-show="store.product.canPurchase">Add to Cart</button>  <!-- ng-show is a directive which will show the button if the value of the expression is true in our case -->
        </div>
        
         <script type="text/javascript" src="js/angular.min.js"></script>
