@@ -19,6 +19,14 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
         };
     });
     
+    app.controller('GalleryController', function(){
+        this.current = 0;
+        
+        this.setCurrent = function(value){
+            this.current = value || 0;
+        };
+    });
+    
     var gems = [
         
         {
