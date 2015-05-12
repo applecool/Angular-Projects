@@ -8,7 +8,7 @@
     <body class="list-group" ng-controller="StoreController as store"> 
        <!-- Product container -->
         
-        <!-- header -->
+        <!-- Store header -->
         <header>
             <h1 class="text-center">Flatlander Crafted Gems</h1>
             <h2 class="text-center">- an Angular store -</h2>
@@ -22,16 +22,18 @@
                      </h3> 
         
         <!-- Image Gallery -->  
-        <section ng-show="product.images.length">
-              <img ng-src="{{product.images[0]}}" />
-              <ul class="list-inline thumbs">
-                  <li class="thumbnail" ng-repeat="image in product.images">
+        <div class="gallery" ng-controller="GalleryController as gallery" ng-show="product.images.length">
+              <div class="img-wrap">
+              <img ng-src="{{product.images[gallery.current]}}" />
+              </div>
+              <ul class="img-thumbnails clearfix">
+                  <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
                   <img ng-src="{{image}}" />
                   </li>
               </ul>
-          </section>
+          </div>
        
-       <!-- Tab controller -->
+       <!-- Product Tabs -->
        <section class="tab" ng-controller="TabController as Tab">
         <ul class="nav nav-pills">
           <li ng-class="{active: Tab.isSet(1)}">
