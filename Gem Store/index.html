@@ -18,6 +18,7 @@
         
         <div class="list-group-item" ng-repeat="product in store.products">
                    <h3 ng-include="'product-title.html'">
+                       <product-title></product-title>
                     </h3> 
         
         <!-- Image Gallery -->  
@@ -46,10 +47,26 @@
           <h4>Description</h4>
           <blockquote>{{product.description}}</blockquote>
         </div>
+        <!-- Spec Tab's Content -->
         <div ng-show="Tab.isSet(2)">
           <h4>Specs</h4>
-          <blockquote>Shine:{{product.shine}} </blockquote>
+            <ul class="list-unstyled">
+              <li>
+                <strong>Shine</strong>
+                : {{product.shine}}</li>
+              <li>
+                <strong>Faces</strong>
+                : {{product.faces}}</li>
+              <li>
+                <strong>Rarity</strong>
+                : {{product.rarity}}</li>
+              <li>
+                <strong>Color</strong>
+                : {{product.color}}</li>
+            </ul>
         </div>
+        
+        <!-- Review Tab's Content-->
         <div ng-show="Tab.isSet(3)">
           <h4>Reviews</h4>
           <blockquote ng-repeat="review in product.reviews">

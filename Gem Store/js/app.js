@@ -37,6 +37,13 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
         };
     });
     
+    app.directive('productTitle', function(){
+        return{
+            restrict: 'E',
+            templateUrl: 'product-title.html'
+        };
+    });
+    
     var gems = [
         
         {
