@@ -1,13 +1,13 @@
 
 //wrapping up javaScript in a closure is a good habit
 (function(){
-var app = angular.module('gemStore', [ ]); //the string gemStore should be matched exactly with the name of the ng-app in the html
+var app = angular.module('gemStore', ['store-products']); //the string gemStore should be matched exactly with the name of the ng-app in the html
 
     app.controller('StoreController', function(){
         this.products = gems;
     });
     
-    app.controller('TabController', function(){
+   /* app.controller('TabController', function(){
         this.tab = 1;
         
         this.setTab = function(value){
@@ -17,15 +17,15 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
         this.isSet = function(tabName){
             return this.tab === tabName;
         };
-    });
+    }); */
     
-    app.controller('GalleryController', function(){
+    /*app.controller('GalleryController', function(){
         this.current = 0;
         
         this.setCurrent = function(value){
             this.current = value || 0;
         };
-    });
+    });*/
     
     app.controller('ReviewController',function(){
         this.review = {};
@@ -37,33 +37,6 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
         };
     });
     
-    app.directive('productTitle', function(){
-        return{
-            restrict: 'E',
-            templateUrl: 'product-title.html'
-        };
-    });
-    
-    app.directive('productDescription', function(){
-        return{
-            restrict: 'E',
-            templateUrl: 'product-description.html'
-        };
-    });
-    
-    app.directive('productSpecs', function(){
-        return{
-            restrict: 'A',
-            templateUrl: 'product-specs.html'
-        };
-    });
-    
-    app.directive('productReviews', function(){
-        return{
-            restrict: 'E',
-            templateUrl: 'product-reviews.html'
-        };
-    });
     
     var gems = [
         
