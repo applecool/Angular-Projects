@@ -27,6 +27,10 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
         };
     });
     
+    app.controller('ReviewController',function(){
+        this.review = {};
+    });
+    
     var gems = [
         
         {
