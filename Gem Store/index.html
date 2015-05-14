@@ -1,16 +1,9 @@
 <html ng-app="gemStore"> 
     <head>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/application.css" />
         <script type="text/javascript" src="js/angular.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script> 
-        <style>
-         .ng-invalid.ng-dirty {
-             border-color: #FA787E;
-         }
-         .ng-valid.ng-dirty {
-             border-color: #78FA89;
-         }
-        </style>
     </head>
     
     <body class="list-group" ng-controller="StoreController as store"> 
@@ -87,7 +80,7 @@
               <fieldset class="form-group" >
               <input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="mark@example.com" title="Email" required />
             </fieldset>
-            <div> reviewForm is {{reviewForm.$valid}}</div> <!-- $valid is a built-in property by angular which validates for us -->
+             <!-- <div> reviewForm is {{reviewForm.$valid}}</div>  $valid is a built-in property by angular which validates for us -->
              <fieldset class="form-group">
               <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
             </fieldset>
