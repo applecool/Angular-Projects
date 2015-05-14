@@ -31,6 +31,7 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
         this.review = {};
         
         this.addReview = function(product){
+            this.review.createdOn = Date.now();
             product.reviews.push(this.review);
             this.review = {}; // resets/clears the form
         };
