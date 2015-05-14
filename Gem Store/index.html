@@ -59,7 +59,7 @@
               <cite class="clearfix"> -{{review.author}}</cite>
           </blockquote>
         <!-- Review Form -->  
-        <form name="reviewForm" ng-controller="ReviewController as reviewCtrl">
+        <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
             <!-- Live Preview -->
              <blockquote>
                  <strong>{{reviewCtrl.review.stars}} Stars</strong>

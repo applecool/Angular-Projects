@@ -29,6 +29,10 @@ var app = angular.module('gemStore', [ ]); //the string gemStore should be match
     
     app.controller('ReviewController',function(){
         this.review = {};
+        
+        this.addReview = function(product){
+            product.reviews.push(this.review);
+        };
     });
     
     var gems = [
