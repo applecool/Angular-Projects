@@ -6,26 +6,6 @@
     this.products = gems;
   });
 
-  /* app.controller('TabController', function(){
-       this.tab = 1;
-
-       this.setTab = function(value){
-           this.tab = value;
-       };
-
-       this.isSet = function(tabName){
-           return this.tab === tabName;
-       };
-   }); */
-
-  /*app.controller('GalleryController', function(){
-      this.current = 0;
-
-      this.setCurrent = function(value){
-          this.current = value || 0;
-      };
-  });*/
-
   app.controller('ReviewController', function() {
     this.review = {};
 
